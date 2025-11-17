@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mock-it: AI-Powered Merch Mockups</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#4f46e5',
+                hover: '#4338ca',
+              },
+              secondary: '#111827',
+              light: '#f9fafb',
+              medium: '#6b7280'
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              fadeOut: {
+                '0%': { opacity: 1 },
+                '100%': { opacity: 0 },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.95)' },
+                '100%': { transform: 'scale(1)' },
+              },
+              scaleOut: {
+                '0%': { transform: 'scale(1)' },
+                '100%': { transform: 'scale(0.95)' },
+              },
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'popup-in': 'fadeIn 300ms ease-out, scaleIn 300ms ease-out',
+              'popup-out': 'fadeOut 200ms ease-in forwards, scaleOut 200ms ease-in forwards',
+              'backdrop-in': 'fadeIn 300ms ease-out',
+              'backdrop-out': 'fadeOut 200ms ease-in forwards',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "jszip": "https://esm.sh/jszip@3.10.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-light">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
